@@ -8,7 +8,12 @@ Agent Type:
 We first preprocessed our data to get it ready for computation. Initially we checked if and rows had NULL values or blank titles and got rid of any of those. Then we got rid of data we aren't currently considering (like the text in the article or the date the article was published) and classified it depending on whether the article is true or not. While preprocessing, we also got rid of very common words such as "the" or "and" as they shouldn't affect the probability of an article being real or fake.
 
 Our agent is a probabilistic, passive upervised learning agent. By using the Naive Bayes assumption, it assumes that all words in the title are independent from each other and guesses based on the training data whether 
-\[P(C \mid d) \propto P(C) \prod_{i=1}^{n} P(w_i \mid C)\] 
-\[P(w_i \mid C) = \frac{\text{count}(w_i, C) + 1}{\sum_{j} \text{count}(w_j, C) + V}\]
+$$ 
+P(C \mid d) \propto P(C) \prod_{i=1}^{n} P(w_i \mid C)
+$$
+
+$$ 
+P(w_i \mid C) = \frac{\text{count}(w_i, C) + 1}{\sum_{j} \text{count}(w_j, C) + V}
+$$
 
 
