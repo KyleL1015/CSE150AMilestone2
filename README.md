@@ -9,12 +9,12 @@ We first preprocessed our data to get it ready for computation. Initially we che
 
 Our agent is a probabilistic, passive, supervised learning agent. It is trained on the initial dataset and can be improved via retraining, but doesn't automatically train itself given data. By using the Naive Bayes assumption, all words in the title are assumed to be independent from each other. The probability for each word is given by
 
-$$ 
+$$
 P(w_i \mid C) = \frac{\text{count}(w_i, C) + α}{\sum_{j} \text{count}(w_j, C) + αV}
 $$
 
-where C is the class of the article(real or fake), α = 1, and V is the number of unique words in the training data. The α value (Laplace Smoothing) makes it so that inputted words that don't appear in the training data won't have a probability of 0 ruining our results. 
+where C is the class of the article(real or fake), α = 1, and V is the number of unique words in the training data. The α value (Laplace Smoothing) makes it so that inputted words that don't appear in the training data won't have a probability of 0 ruining our results. Then by multiplying all of our probabilities together and performing Bayes' Theorem, we can get a value proportional to P(C | e) where e is our evidence. The P(e) in the denominator of Bayes Theorem isn't necessary because the value of the denominator for fake/real news will be the same.
 
 $$
-P(C \mid d) \approx P(C) \prod_{i=1}^{n} P(w_i \mid C)
+P(C \mid e) \propto P(C) \prod_{i=1}^{n} P(w_i \mid C)
 $$
