@@ -17,5 +17,5 @@ where C is the class of the article(real or fake), α = 1, and V is the number o
 
 P(C | d) ∝ P(C) ∏(i=1 to n) P(W_i | C)
 $$
-P(C \mid d) ∝ P(C) \prod_{i=1}^{n} \ P(w_i \mid C)
+P(C \mid d) \approx P(C) \prod_{i=1}^{n} P(w_i \mid C)
 $$
