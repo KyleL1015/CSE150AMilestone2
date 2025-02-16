@@ -15,7 +15,6 @@ $$
 
 where C is the class of the article(real or fake), α = 1, and V is the number of unique words in the training data. The α value (Laplace Smoothing) makes it so that inputted words that don't appear in the training data won't have a probability of 0 ruining our results. 
 
-P(C | d) ∝ P(C) ∏(i=1 to n) P(W_i | C)
 $$
 P(C \mid d) \approx P(C) \prod_{i=1}^{n} P(w_i \mid C)
 $$
