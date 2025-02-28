@@ -1,4 +1,5 @@
 Model: [CSE150AMilestone2.ipynb](https://github.com/KyleL1015/CSE150AMilestone2/blob/main/CSE150AMilestone2.ipynb)
+
 Overview:
 This project classifies news articles as either real or fake using a Multinomial Naive Bayes model. Naive Bayes is a probabilistic learning algorithm based on Bayes' Theorem, which assumes that all features are conditionally independent given the class label. In this case, the class label represents whether an article is real or fake, while the features are the processed words from the article's title and text. "Multinomial" here means that the model considers the frequency of each word in the document rather than whether it exists or not.
 
