@@ -1,5 +1,18 @@
-CSE150AMilestone2
 Model: [CSE150AMilestone2.ipynb](https://github.com/KyleL1015/CSE150AMilestone2/blob/main/CSE150AMilestone2.ipynb)
+
+## Update:
+Overview:
+This project classifies news articles as either real or fake using a Multinomial Naive Bayes model. Naive Bayes is a probabilistic learning algorithm based on Bayes' Theorem, which assumes that all features are conditionally independent given the class label. In this case, the class label represents whether an article is real or fake, while the features are the processed words from the article's title and text. "Multinomial" here means that the model considers the frequency of each word in the document rather than whether it exists or not.
+
+Multinomial Naive Bayes is a suitable model for detecting patterns in articles because it efficiently handles text classification by considering word frequencies while making the simplifying assumption of word independence. This makes it computationally efficient while remaining powerful in practice as demonstrated by our results.
+
+Below is a diagram of the model, where $$w_1, w_2, ..., w_n$$ represent the words from the dataset the model was trained on, and $$C$$ represents the predicted class of the article which are real or fake.
+<p align="center">
+  <img width="460" height="300" src="MultinomialNaiveBayesArticle.png">
+</p>
+End of Update
+
+-----------------
 
 PEAS:
 In terms of PEAS, the environment for our model would be news articles from the past to the present, especially ones where it's difficult to determine credibility, as they are a solid testing ground for how accurate our model is. Specifically it looks at the dataset from [Kaggle](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset/data). The performance measure of our model is the accuracy and recall of its prediction of whether it is real or fake news article. The actuators in this system are the outputs generated within the Jupyter Notebook, including the classification report, confusion matrix, and probability estimates, which allow us to assess the model's predictions. Finally, the sensors correspond to the model itself, which processes data from the input news articles by extracting word-based features from the dataset and using learned probabilities to classify each article as real or fake.
